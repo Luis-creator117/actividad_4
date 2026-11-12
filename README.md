@@ -34,11 +34,11 @@ Para ejecutar y probar esta aplicación, sigue estos pasos:
 
 | Vista principal (Tarjetas) | Filtro por Región |
 | :---: | :---: |
-| ![Vista principal](https://github.com/user-attachments/assets/553d7641-75b6-4933-bde8-eb079e8aefee) | ![Filtro]() |
+| ![Vista principal](https://github.com/user-attachments/assets/553d7641-75b6-4933-bde8-eb079e8aefee) | ![Filtro](https://github.com/user-attachments/assets/681174b5-6389-42ee-b35a-9e0a845416c0) |
 
 | Estado de Carga (Spinner) | Estado de Error / Vacío |
 | :---: | :---: |
-| ![Cargando](screenshots/cargando.png) | ![Error](screenshots/error.png) |
+| ![Cargando](https://github.com/user-attachments/assets/2133a599-16d3-407e-be1b-97cdc0676884) | ![Error](https://github.com/user-attachments/assets/7df5f16c-c800-4d1f-9a29-d3eed8900167) |
 
 ---
 
