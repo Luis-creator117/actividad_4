@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Países del Mundo | API REST Countries</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>🌍 Países del Mundo</h1>
+    <p class="subtitle">Datos obtenidos en tiempo real desde REST Countries API</p>
+  </header>
+
+  <main class="container">
+    <!-- Controles de usuario -->
+    <section class="controls" aria-label="Controles de búsqueda y filtro">
+      <div class="search-box">
+        <label for="searchInput" class="sr-only">Buscar país</label>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="🔍 Buscar por nombre..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="filter-box">
+        <label for="regionFilter" class="sr-only">Filtrar por región</label>
+        <select id="regionFilter">
+          <option value="">Todas las regiones</option>
+          <option value="Africa">África</option>
+          <option value="Americas">América</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europa</option>
+          <option value="Oceania">Oceanía</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Estados: carga, error, vacío -->
+    <div id="loadingSpinner" class="spinner hidden" role="status" aria-live="polite">
+      <div class="spinner-circle"></div>
+      <p>Cargando datos...</p>
+    </div>
+
+    <div id="errorMessage" class="alert alert-error hidden" role="alert">
+      <span class="alert-icon">⚠️</span>
+      <p id="errorText">Ocurrió un error inesperado.</p>
+      <button id="retryBtn" class="btn-retry">Reintentar</button>
+    </div>
+
+    <div id="emptyState" class="alert alert-info hidden" role="status">
+      <span class="alert-icon">🔎</span>
+      <p>No se encontraron países con esos criterios.</p>
+    </div>
+
+    <!-- Listado de países -->
+    <section id="countriesGrid" class="grid" aria-live="polite"></section>
+
+    <!-- Paginación -->
+    <nav id="pagination" class="pagination hidden" aria-label="Paginación">
+      <button id="prevBtn" class="btn-page" disabled>← Anterior</button>
+      <span id="pageInfo" class="page-info"></span>
+      <button id="nextBtn" class="btn-page">Siguiente →</button>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <p>Proyecto académico – Laboratorio de Programación Web</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
